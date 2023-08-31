@@ -50,12 +50,13 @@ public class BoxMovingCalculator
     }
 
     // Get user input for three integer numbers, n, m, and p.
-    // The integers should be validated to ensure they are within the following ranges:
+    // Integers should be validated to ensure they are within the following ranges:
     // N, M and P. 1 <= N <= 100, 1 <= M <= 5, 2 <= P <= 5.
     public static List<int> GetUserInput()
     {
         List<int> userInputs = new List<int>();
 
+        // Added inital prompt
         Console.WriteLine("Enter three digits N, M and P separated by spaces: ");
 
         string[] inputs;
@@ -63,6 +64,7 @@ public class BoxMovingCalculator
         int m;
         int p;
 
+        // Loop until values are within valid ranges
         while (true)
         {
             try
@@ -75,6 +77,7 @@ public class BoxMovingCalculator
 
                 if (!(n is >= 1 and <= 100) || !(m is >= 1 and <= 5) || !(p is >= 2 and <= 5))
                 {
+                    // Added additional prompt to ask for rentry with ranges
                     Console.WriteLine("Please enter valid integer values within 1<=N<=100, 1<=M<=5, 2<=P<=5 ranges.");
                     continue;
                 }
@@ -94,16 +97,15 @@ public class BoxMovingCalculator
         return userInputs;
     }
 
-    // You have N boxes in your room which you want to carry to a different place.
+    // You have N boxes in your room which you want to carry to a different place
     // There are too many to carry in one trip, you want to split them into several piles
-    // You have been given a list of three integers, n, m, and p provided in the userInputs variable.
+    // three integers, n, m, and p provided in the userInputs
     // n, represents the number of boxes you have
     // m, represents the maximum number of boxes you can carry in one trip
     // p, represents the number of parts you can split a pile into
-    // if the current pile has at most M boxes, you can carry it as is,
-    // otherwise you split it into P parts as equally as possible,
-    // so that the sizes of the parts differ at most by 1
-    // apply the same algorithm to each of the parts
+    // If the current pile has at most M boxes, carry it as is
+    // Otherwise split it into P parts as equally as possible, sizes of the parts differ at most by 1
+    // Apply the same algorithm to each of the parts
     // If you're trying to split less than n boxes into p piles, discard resulting zero-sized piles
     public static int CalculateNumberOfPiles(List<int> userInputs)
     {
@@ -151,6 +153,7 @@ public class BoxMovingCalculator
         return numPiles;
     }
 
+    // Simple write to console
     private static void WriteOutput(string output)
     {
         Console.WriteLine(output);
