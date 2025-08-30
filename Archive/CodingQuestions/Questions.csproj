@@ -48,10 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoxMovingCalculator.cs" />
+    <Compile Include="CountCharOccurrence.cs" />
+    <Compile Include="FindMissingNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculateNumberPiles.cs" />
-    <Compile Include="ReverseOrderWords.cs" />
+    <Compile Include="ReverseOrderOfWords.cs" />
+    <Compile Include="WorkingWithList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

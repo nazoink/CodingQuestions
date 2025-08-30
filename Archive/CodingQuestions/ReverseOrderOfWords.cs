@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class ReverseOrderWords
+public class ReverseOrderOfWords
 {
     /*
     You are given an integer N, followed by N lines of input (1 <= N <= 100). 
@@ -29,7 +29,7 @@ public class ReverseOrderWords
     public static void RunCode()
     {
         //Retrieve inputs from user
-        var inputs = ReadInputs();
+        var inputs = GetUserInput();
 
         //Reverses word order
         var outputs = ReverseWordOrder(inputs); ;
@@ -38,7 +38,7 @@ public class ReverseOrderWords
         WriteOutputs(outputs);
     }
 
-    private static List<string> ReadInputs()
+    private static List<string> GetUserInput()
     {
         //1st input is a integer value
         //n input is string values to n times
@@ -74,18 +74,20 @@ public class ReverseOrderWords
         return inputs;
     }
 
-    private static List<string> ReverseWordOrder(List<string> inputs)
+    public static List<string> ReverseWordOrder(List<string> inputs)
     {
         //Must reverse order of words for output
         var output = new List<string>();
 
         //Reverse order of words
         inputs.ForEach(input => {
+            //Array.Reverse(input.Split(' '));
             var strings = input.Split(' ').Reverse().ToList();
             string rstr = "";
             strings.ForEach(str => rstr += str + ' ');
             output.Add(rstr.Trim());
         });
+
 
         return output;
     }
