@@ -20,9 +20,6 @@ These instructions define how GitHub Copilot should assist with this project. Th
 - Prioritize readability, testability, and SOLID principles.s
 - Use `CONTRIBUTING.md` for contribution guidelines.
 - C# class properties should be PascalCase. The JSON serializer will convert them to camelCase for the API, and the Blazor app will use camelCase as it receives the data from the API.
-- Use requirement files found `docs/requirements.md` for project context and requirements.
-- Use the `docs/*` directory for project documentation.
-
 
 ## 📁 Folder Structure
 
@@ -31,8 +28,8 @@ Use this structure as a guide when creating or updating files:
 ```text
 /
     Archive/
-    packages/
-    UnitTesting/
+        packages/
+        UnitTesting/
     src/
         Project01/
             Calc/
