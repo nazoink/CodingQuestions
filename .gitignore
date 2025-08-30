@@ -29,7 +29,6 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
-[Oo]ut/
 [Ll]og/
 [Ll]ogs/
 
@@ -361,3 +360,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+#merge files
+*.orig
+
+#Emulator Certs
+emulatorcert.crt
+webasm_publish/
